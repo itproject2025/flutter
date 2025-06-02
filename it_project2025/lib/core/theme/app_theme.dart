@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_colors.dart';
 
 TextStyle _pretendardStyle({
@@ -9,9 +10,9 @@ TextStyle _pretendardStyle({
 }) {
   return TextStyle(
     fontFamily: 'Pretendard',
-    fontSize: size,
+    fontSize: size.sp,
     fontWeight: weight,
-    height: height / size,
+    height: height.sp / size.sp,
     color: color,
   );
 }
@@ -155,4 +156,50 @@ class AppTheme {
         appBarIcon: AppColors.white,
         appBarTitle: AppColors.white,
       );
+
+  static TextStyle navTextStyle({
+    required Color color,
+    double fontSize = 12,
+    FontWeight fontWeight = FontWeight.w400,
+    double height = 1.50,
+  }) {
+    return TextStyle(
+      color: color,
+      fontSize: fontSize.sp,
+      fontFamily: 'Pretendard',
+      fontWeight: fontWeight,
+      height: height,
+    );
+  }
+
+  // nav bar
+  static TextStyle get navLabel => navTextStyle(
+        color: AppColors.gray400,
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        height: 1.50,
+      );
+
+  static TextStyle get navLabelSelected => navTextStyle(
+        color: AppColors.gray600,
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        height: 1.50,
+      );
+
+// custom exampel
+  static TextStyle customText({
+    required double fontSize,
+    required FontWeight fontWeight,
+    required Color color,
+    double? height,
+  }) {
+    return TextStyle(
+      fontFamily: 'Pretendard',
+      fontSize: fontSize.sp,
+      fontWeight: fontWeight,
+      color: color,
+      height: height != null ? height / fontSize : null,
+    );
+  }
 }

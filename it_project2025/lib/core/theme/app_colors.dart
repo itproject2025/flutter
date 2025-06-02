@@ -9,6 +9,8 @@ class AppColors {
   static const Color nightNavy = Color(0xFF013236);
   static const Color nightBlueGray = Color(0xFFB5CFD1);
 
+  static const Color shadowLight = Color(0x14000000);
+
   // Error
   static const Color error = Color(0xFFFF3F3F);
 
