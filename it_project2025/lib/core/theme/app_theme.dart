@@ -65,7 +65,7 @@ TextTheme _buildTextTheme(
         size: 12,
         weight: FontWeight.normal,
         height: 18,
-        color: gray600), // Caption2
+        color: gray700), // Caption2
   );
 }
 
@@ -87,6 +87,8 @@ ThemeData _buildTheme({
   required Color appBarBg,
   required Color appBarIcon,
   required Color appBarTitle,
+  required Color buttonBackground,
+  required Color buttonBorder,
 }) {
   return ThemeData(
     useMaterial3: true,
@@ -101,6 +103,8 @@ ThemeData _buildTheme({
       onError: onError,
       surface: surface,
       onSurface: onSurface,
+      surfaceContainer: buttonBackground, // 버튼 back
+      outline: buttonBorder, // 버튼 border
     ),
     scaffoldBackgroundColor: background,
     textTheme:
@@ -122,7 +126,7 @@ class AppTheme {
         primary: AppColors.dayBlue,
         onPrimary: AppColors.black,
         secondary: AppColors.dayPink,
-        onSecondary: AppColors.black,
+        onSecondary: AppColors.gray600,
         error: AppColors.error,
         onError: AppColors.white,
         background: AppColors.white,
@@ -135,6 +139,8 @@ class AppTheme {
         appBarBg: AppColors.white,
         appBarIcon: AppColors.black,
         appBarTitle: AppColors.black,
+        buttonBackground: AppColors.white.withOpacity(0.3),
+        buttonBorder: AppColors.white.withOpacity(0.6),
       );
 
   static ThemeData get darkTheme => _buildTheme(
@@ -155,6 +161,8 @@ class AppTheme {
         appBarBg: AppColors.gray700,
         appBarIcon: AppColors.white,
         appBarTitle: AppColors.white,
+        buttonBackground: AppColors.gray300.withOpacity(0.3),
+        buttonBorder: AppColors.gray300.withOpacity(0.6),
       );
 
   static TextStyle navTextStyle({
@@ -172,7 +180,6 @@ class AppTheme {
     );
   }
 
-  // nav bar
   static TextStyle get navLabel => navTextStyle(
         color: AppColors.gray400,
         fontSize: 12,
@@ -187,7 +194,6 @@ class AppTheme {
         height: 1.50,
       );
 
-// custom exampel
   static TextStyle customText({
     required double fontSize,
     required FontWeight fontWeight,

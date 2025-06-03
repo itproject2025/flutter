@@ -2,11 +2,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theme/app_colors.dart';
 
 class AppConstants {
-  // nav icon
+  // icons
   static const String iconHome = 'assets/icons/ic-nav-home.svg';
   static const String iconCalendar = 'assets/icons/ic-nav-calendar.svg';
   static const String iconDiary = 'assets/icons/ic-nav-diary.svg';
   static const String iconMyPage = 'assets/icons/ic-nav-my.svg';
+  static const String iconArrow = 'assets/icons/ic-arrow.svg';
+  static const String iconClock = 'assets/icons/ic-clock.svg';
+  static const String iconBeach = 'assets/icons/ic-Beach.svg';
 
   // nav label
   static const String labelHome = '홈';
@@ -58,11 +61,26 @@ class AppConstants {
   static double get navPaddingVertical => _navPaddingVertical.h;
   static double get navShadowBlur => _navShadowBlur.r;
 
+  // home screen
+  static const double _homeScreenPaddingTop = 46;
+  static const double _homeScreenPaddingBottom = 140;
+  static const List<double> _homeScreenGradients = [0.0, 0.15, 1.0];
+
+  // home screen getter
+  static double get homeScreenPaddingTop => _homeScreenPaddingTop.h;
+  static double get homeScreenPaddingBottom => _homeScreenPaddingBottom.h;
+  static List<double> get homeScreenGradients => _homeScreenGradients;
+
   // common
+  static double get commonWidth => 342.w;
+  static double get commonHeight => 50.h;
+
   static double get commonPadding => 16.w;
   static double get smallPadding => 8.w;
   static double get largePadding => 24.w;
   static double get extraLargePadding => 32.w;
+  static double get mediumPadding => 10.w;
+  static double get extraSmallPadding => 6.w;
 
   static double get commonMargin => 16.w;
   static double get smallMargin => 8.w;
@@ -73,7 +91,16 @@ class AppConstants {
   static double get largeBorderRadius => 20.r;
 
   static double get iconSizeSmall => 16.r;
-  static double get iconSizeMedium => 24.r;
-  static double get iconSizeLarge => 32.r;
-  static double get iconSizeXLarge => 48.r;
+  static double get iconSizeXLarge => 70.r;
+
+  // button styles
+  static const double _buttonBorderRadius = 24;
+  static const double _buttonIconSize = 28;
+  static const double _buttonPaddingHorizontal = 24;
+  static const double _buttonPaddingVertical = 11;
+
+  static double get buttonBorderRadius => _buttonBorderRadius.r;
+  static double get buttonIconSize => _buttonIconSize.r;
+  static double get buttonPaddingHorizontal => _buttonPaddingHorizontal.w;
+  static double get buttonPaddingVertical => _buttonPaddingVertical.h;
 }
