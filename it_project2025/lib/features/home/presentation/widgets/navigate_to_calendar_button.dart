@@ -19,7 +19,7 @@ class NavigateToCalendarButton extends StatelessWidget {
         width: AppConstants.commonWidth,
         height: AppConstants.commonHeight,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.surfaceContainer,
+          color: Theme.of(context).colorScheme.surfaceContainerLow,
           borderRadius: BorderRadius.circular(AppConstants.buttonBorderRadius),
           border: Border.all(
             color: Theme.of(context).colorScheme.outline,

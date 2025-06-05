@@ -18,44 +18,47 @@ TextStyle _pretendardStyle({
 }
 
 TextTheme _buildTextTheme(
-    Color primary, Color secondary, Color gray600, Color gray700, Color white) {
+    Color onPrimary, Color secondary, Color gray600, Color gray700) {
   return TextTheme(
     displayLarge: _pretendardStyle(
-        size: 24, weight: FontWeight.bold, height: 30, color: primary), // H1
+        size: 28, weight: FontWeight.bold, height: 40, color: onPrimary), // H1
     headlineLarge: _pretendardStyle(
         size: 20,
         weight: FontWeight.bold,
         height: 26,
-        color: primary), // H1(20)
+        color: onPrimary), // H1(20)
     headlineMedium: _pretendardStyle(
-        size: 18, weight: FontWeight.bold, height: 24, color: primary), // H2
+        size: 18, weight: FontWeight.bold, height: 24, color: onPrimary), // H2
     titleLarge: _pretendardStyle(
         size: 16,
         weight: FontWeight.bold,
         height: 24,
-        color: primary), // Subtitle1
+        color: onPrimary), // Subtitle1
     titleMedium: _pretendardStyle(
         size: 16,
         weight: FontWeight.w600,
         height: 24,
-        color: primary), // Subtitle2
+        color: onPrimary), // Subtitle2
     bodyLarge: _pretendardStyle(
         size: 16,
         weight: FontWeight.normal,
         height: 24,
-        color: primary), // Body1
+        color: onPrimary), // Body1
     bodyMedium: _pretendardStyle(
         size: 14,
         weight: FontWeight.normal,
         height: 20,
-        color: primary), // Body2
+        color: gray600), // Body2
     bodySmall: _pretendardStyle(
         size: 14,
         weight: FontWeight.normal,
         height: 20,
         color: gray600), // Body3
     labelLarge: _pretendardStyle(
-        size: 18, weight: FontWeight.bold, height: 24, color: white), // Button1
+        size: 18,
+        weight: FontWeight.bold,
+        height: 24,
+        color: onPrimary), // Button1
     labelMedium: _pretendardStyle(
         size: 12,
         weight: FontWeight.w600,
@@ -88,7 +91,10 @@ ThemeData _buildTheme({
   required Color appBarIcon,
   required Color appBarTitle,
   required Color buttonBackground,
+  required Color buttonBackgroundHigh,
   required Color buttonBorder,
+  required Color surfaceContainerHigh,
+  required Color divider,
 }) {
   return ThemeData(
     useMaterial3: true,
@@ -103,12 +109,14 @@ ThemeData _buildTheme({
       onError: onError,
       surface: surface,
       onSurface: onSurface,
-      surfaceContainer: buttonBackground, // 버튼 back
-      outline: buttonBorder, // 버튼 border
+      surfaceContainerLow: buttonBackground, // 30%
+      surfaceContainer: buttonBackground, // 40%
+      surfaceContainerHigh: surfaceContainerHigh, // 70%
+      outline: buttonBorder, // 60%
+      outlineVariant: divider, // divider
     ),
     scaffoldBackgroundColor: background,
-    textTheme:
-        _buildTextTheme(onBackground, onBackground, gray600, gray700, white),
+    textTheme: _buildTextTheme(onPrimary, onSecondary, gray600, gray700),
     appBarTheme: AppBarTheme(
       backgroundColor: appBarBg,
       elevation: 0,
@@ -140,7 +148,10 @@ class AppTheme {
         appBarIcon: AppColors.black,
         appBarTitle: AppColors.black,
         buttonBackground: AppColors.white.withOpacity(0.3),
+        buttonBackgroundHigh: AppColors.white.withOpacity(0.4),
         buttonBorder: AppColors.white.withOpacity(0.6),
+        surfaceContainerHigh: AppColors.white.withOpacity(0.7),
+        divider: AppColors.gray200,
       );
 
   static ThemeData get darkTheme => _buildTheme(
@@ -148,7 +159,7 @@ class AppTheme {
         primary: AppColors.nightNavy,
         onPrimary: AppColors.white,
         secondary: AppColors.nightBlueGray,
-        onSecondary: AppColors.black,
+        onSecondary: AppColors.gray300,
         error: AppColors.error,
         onError: AppColors.white,
         background: AppColors.gray700,
@@ -162,7 +173,10 @@ class AppTheme {
         appBarIcon: AppColors.white,
         appBarTitle: AppColors.white,
         buttonBackground: AppColors.gray300.withOpacity(0.3),
+        buttonBackgroundHigh: AppColors.gray300.withOpacity(0.4),
         buttonBorder: AppColors.gray300.withOpacity(0.6),
+        surfaceContainerHigh: AppColors.white.withOpacity(0.7),
+        divider: AppColors.gray200,
       );
 
   static TextStyle navTextStyle({
