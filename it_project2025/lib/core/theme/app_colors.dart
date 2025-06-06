@@ -32,4 +32,7 @@ class AppColors {
   // flight card
   static const Color quickTurnBlue = Color(0xFF7F96FF);
   static const Color layOverPink = Color(0xFFFF6990);
+
+  // diary button
+  static const Color diaryButtonTextColor = Color(0xFFEBEBEB);
 }

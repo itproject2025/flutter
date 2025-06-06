@@ -13,6 +13,9 @@ class AppConstants {
   static const String iconOneWay = 'assets/icons/ic-oneway.svg';
   static const String iconTwoWay = 'assets/icons/ic-twoway.svg';
 
+  // images
+  static const String imageDiary = 'assets/images/img-diary.png';
+
   // nav label
   static const String labelHome = '홈';
   static const String labelCalendar = '캘린더';
@@ -119,9 +122,12 @@ class AppConstants {
   static const double _buttonIconSize = 28;
   static const double _buttonPaddingHorizontal = 24;
   static const double _buttonPaddingVertical = 11;
+  static const double _navigateToDiaryButtonHeight = 152;
 
   static double get buttonBorderRadius => _buttonBorderRadius.r;
   static double get buttonIconSize => _buttonIconSize.r;
   static double get buttonPaddingHorizontal => _buttonPaddingHorizontal.w;
   static double get buttonPaddingVertical => _buttonPaddingVertical.h;
+  static double get navigateToDiaryButtonHeight =>
+      _navigateToDiaryButtonHeight.h;
 }
