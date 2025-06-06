@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../widgets/jetlag_guide_widget.dart';
+import '../widgets/navigate_to_diary_button.dart';
 import '../widgets/upcoming_flight_notice_widget.dart';
 import '../widgets/upcoming_flight_schedule_list_widget.dart';
 import '../widgets/navigate_to_calendar_button.dart';
@@ -57,6 +58,10 @@ class HomeScreen extends StatelessWidget {
                         // TODO: 캘린더 이동 로직 추가
                       }),
                       // TODO : 비행일기 추가 버튼 추가 & 비행일기 없을 때 분기 처리
+                      SizedBox(height: AppConstants.smallPaddingVertical),
+                      NavigateToDiaryButton(onTap: () {
+                        // TODO: 비행일기 이동 로직 추가
+                      }),
                     ],
                   ),
                 ),

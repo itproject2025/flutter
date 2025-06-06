@@ -28,4 +28,11 @@ class AppColors {
   // Transparent colors
   static final Color whiteOpacity30 = white.withOpacity(0.3);
   static final Color whiteOpacity60 = white.withOpacity(0.6);
+
+  // flight card
+  static const Color quickTurnBlue = Color(0xFF7F96FF);
+  static const Color layOverPink = Color(0xFFFF6990);
+
+  // diary button
+  static const Color diaryButtonTextColor = Color(0xFFEBEBEB);
 }
