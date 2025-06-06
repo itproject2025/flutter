@@ -10,6 +10,8 @@ class AppConstants {
   static const String iconArrow = 'assets/icons/ic-arrow.svg';
   static const String iconClock = 'assets/icons/ic-clock.svg';
   static const String iconBeach = 'assets/icons/ic-Beach.svg';
+  static const String iconOneWay = 'assets/icons/ic-oneway.svg';
+  static const String iconTwoWay = 'assets/icons/ic-twoway.svg';
 
   // images
   static const String imageDiary = 'assets/images/img-diary.png';
@@ -78,16 +80,18 @@ class AppConstants {
   static double get commonWidth => 342.w;
   static double get commonHeight => 50.h;
 
-  static double get commonPadding => 16.w;
-  static double get smallPadding => 8.w;
-  static double get largePadding => 24.w;
-  static double get extraLargePadding => 32.w;
-  static double get mediumPadding => 10.w;
-  static double get extraSmallPadding => 6.w;
-
-  static double get commonMargin => 16.w;
-  static double get smallMargin => 8.w;
-  static double get largeMargin => 24.w;
+  static double get commonPaddingHorizontal => 16.w;
+  static double get commonPaddingVertical => 16.h;
+  static double get smallPaddingHorizontal => 8.w;
+  static double get smallPaddingVertical => 8.h;
+  static double get largePaddingHorizontal => 24.w;
+  static double get largePaddingVertical => 24.h;
+  static double get extraLargePaddingHorizontal => 32.w;
+  static double get extraLargePaddingVertical => 32.h;
+  static double get mediumPaddingHorizontal => 10.w;
+  static double get mediumPaddingVertical => 10.h;
+  static double get extraSmallPaddingHorizontal => 6.w;
+  static double get extraSmallPaddingVertical => 6.h;
 
   static double get borderRadius => 12.r;
   static double get smallBorderRadius => 8.r;
@@ -95,6 +99,23 @@ class AppConstants {
 
   static double get iconSizeSmall => 16.r;
   static double get iconSizeXLarge => 70.r;
+
+  // card styles
+  static const double _cardBorderRadius = 30;
+  static const double _cardMarginHorizontal = 24;
+  static const double _cardPaddingHorizontal = 30;
+  static const double _cardPaddingVertical = 22;
+  static const double _cardShadowBlur = 10;
+  static const double _cardFlagWidth = 28;
+  static const double _cardFlagHeight = 14;
+
+  static double get cardBorderRadius => _cardBorderRadius.r;
+  static double get cardMarginHorizontal => _cardMarginHorizontal.w;
+  static double get cardPaddingHorizontal => _cardPaddingHorizontal.w;
+  static double get cardPaddingVertical => _cardPaddingVertical.h;
+  static double get cardShadowBlur => _cardShadowBlur.r;
+  static double get cardFlagWidth => _cardFlagWidth.w;
+  static double get cardFlagHeight => _cardFlagHeight.h;
 
   // button styles
   static const double _buttonBorderRadius = 24;

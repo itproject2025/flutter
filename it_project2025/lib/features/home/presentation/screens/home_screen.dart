@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(height: AppConstants.homeScreenPaddingTop),
                       UpcomingFlightNoticeWidget(
                           upcomingFlight: upcomingFlight),
-                      SizedBox(height: AppConstants.smallPadding),
+                      SizedBox(height: AppConstants.smallPaddingVertical),
                       UpcomingFlightScheduleListWidget(flights: flights),
                       NavigateToCalendarButton(onTap: () {
                         // TODO: 캘린더 이동 로직 추가

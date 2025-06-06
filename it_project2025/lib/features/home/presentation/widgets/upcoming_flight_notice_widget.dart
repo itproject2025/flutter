@@ -23,7 +23,7 @@ class UpcomingFlightNoticeWidget extends StatelessWidget {
               width: AppConstants.buttonIconSize,
               height: AppConstants.buttonIconSize,
             ),
-            SizedBox(width: AppConstants.extraSmallPadding),
+            SizedBox(width: AppConstants.smallPaddingHorizontal),
             Text(
               '아직 예정된 비행일정이 없어요.',
               style: Theme.of(context).textTheme.titleMedium,
@@ -41,7 +41,7 @@ class UpcomingFlightNoticeWidget extends StatelessWidget {
             width: AppConstants.buttonIconSize,
             height: AppConstants.buttonIconSize,
           ),
-          SizedBox(width: AppConstants.extraSmallPadding),
+          SizedBox(width: AppConstants.smallPaddingHorizontal),
           Text(
             '${upcomingFlight!.daysLeft}일 뒤 ${upcomingFlight!.destination}행 비행이 있어요.',
             style: Theme.of(context).textTheme.titleMedium,

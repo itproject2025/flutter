@@ -16,7 +16,7 @@ class UpcomingFlightScheduleListWidget extends StatelessWidget {
     return Column(
       children: [
         ...flights.take(3).map((flight) => FlightCard(flight: flight)),
-        SizedBox(height: AppConstants.mediumPadding),
+        SizedBox(height: AppConstants.smallPaddingVertical),
       ],
     );
   }
