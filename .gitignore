@@ -34,6 +34,17 @@ pubspec.lock
 # Web related
 lib/generated_plugin_registrant.dart
 
+# Generated plugin files (Flutter auto-generated)
+**/generated_plugin_registrant.*
+**/flutter/generated_plugin_registrant.*
+**/flutter/generated_plugins.cmake
+**/flutter/ephemeral/
+**/flutter/flutter_export_environment.sh
+**/flutter/Flutter-Generated.xcconfig
+**/flutter/Flutter-Debug.xcconfig
+**/flutter/Flutter-Release.xcconfig
+**/flutter/Flutter-Profile.xcconfig
+
 # Symbolication related
 app.*.symbols
 
